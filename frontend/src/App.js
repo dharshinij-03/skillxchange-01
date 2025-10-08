@@ -1,3 +1,4 @@
+// frontend/App.js
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* Profile page handles both viewing and editing */}
+        <Route path="/profile" element={<Profile />} /> 
         <Route path="/profile/suggestion" element={<Suggestion />} /> 
-        
       </Routes>
     </div>
   );
