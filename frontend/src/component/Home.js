@@ -88,7 +88,7 @@ function Home() {
         localStorage.setItem("refreshToken", data.refreshToken);
         
         setIsLoggedIn(true); 
-        navigate("/profile"); // ✅ Navigate to profile page after successful login
+        navigate("/");
 
       } else {
         alert(data.message || "Login failed");
@@ -170,7 +170,7 @@ function Home() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/about-us">
                   About
                 </Link>
               </li>

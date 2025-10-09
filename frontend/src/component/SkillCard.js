@@ -1,24 +1,24 @@
 import React from "react";
-import { Card, Badge, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Card, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom"; 
 
 const SkillCard = ({ skill }) => {
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   const handleConnect = () => {
-    alert("Your connection request has been sent");
-    navigate("/chat"); // Navigate to the chat page
+    alert(`Your connection request to ${skill.name} has been sent`);
+    navigate("/chat");
   };
 
   return (
     <Card
-      className="shadow-sm border-3 text-center"
+      className="shadow-lg border-3 text-center"
       style={{
         width: "22rem",
-        backgroundColor: "#bdd3e9ff",
+        backgroundColor: "#bdd3e9ff", // Reverting to original card background
         color: "white",
         position: "relative",
-        borderRadius:"10px"
+        borderRadius: "10px"
       }}
     >
       <Card.Body>
@@ -100,6 +100,8 @@ const SkillCard = ({ skill }) => {
             <span className="text-muted">Not added</span>
           )}
         </div>
+        
+        {/* The 'wantToLearn' data is present in 'skill' object but not displayed. */}
 
         {/* Action Buttons */}
         <div className="d-flex gap-2 justify-content-center">
@@ -109,7 +111,7 @@ const SkillCard = ({ skill }) => {
           <Button
             variant="success"
             size="sm"
-            onClick={handleConnect} // Use handleConnect function
+            onClick={handleConnect}
           >
             Connect
           </Button>
