@@ -9,6 +9,7 @@ import Suggestion from './component/Suggestion';
 import Chat from './component/Chat';
 import Aboutus from "./component/Aboutus";
 import ContactUs from './component/ContactUs';
+import MyLearning from './component/Mylearning';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
         {/* Profile page handles both viewing and editing */}
         <Route path="/profile" element={<Profile />} /> 
+        <Route path="/my-learning" element={<MyLearning />} />
         <Route path="/profile/suggestion" element={<Suggestion />} /> 
       </Routes>
     </div>
